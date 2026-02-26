@@ -1,0 +1,89 @@
+div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: rgb(193, 186, 206);
+}
+
+#form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+#inputValue {
+    border-radius: 5px;
+    border: 1px solid rgb(33, 30, 30);
+    margin-right: 10px;
+    padding: 5px;
+
+}
+#inputValue:hover{
+    background-color: rgb(244, 238, 238);
+}
+#inputValue:focus {
+    outline:none;
+}
+
+#form button {
+    height: 28px;
+    width: 60px;
+    background-color: rgb(20, 149, 20);
+    border-radius: 5px;
+    border: 1px solid rgb(185, 182, 182);
+    cursor: pointer;
+}
+
+#form button:hover {
+    background-color: rgb(43, 179, 43);
+}
+
+
+#items{
+
+    padding: 10px;
+    list-style: none;
+
+
+    li {
+
+        gap: 15px;
+        display: flex;
+        border: 2px solid grey;
+        background-color: rgba(240, 255, 252, 0.846);
+        border-radius: 5px;
+        padding: 20px;
+        align-items: centre;
+        justify-content: center;
+
+
+
+        #editButton{
+            background-color: rgb(141, 207, 227);
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 5px;
+            
+        }
+        #editButton:hover{
+            background-color: rgb(51, 178, 203);
+        }
+
+        #DeleteButton{
+            background-color: rgb(216, 139, 139);
+            border-radius: 5px;
+            border:1px solid black;
+
+        }
+        #DeleteButton:hover{
+            background-color: rgb(196, 92, 109);
+        }
+    }
+
+    
+
+}

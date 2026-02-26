@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", sans-serif;
+    background: #3b2417;   
+    color: #f1dcc2;        
+    text-align: center;
+}
+
+/* Headings */
+
+header {
+    background: #180101; 
+    padding: 60px 20px;
+    border-bottom: 4px solid #c17029;
+    position: relative;
+}
+
+/* Main Title */
+header h1 {
+    margin: 0;
+    font-size: 60px;
+    font-family:'Times New Roman', Times, serif ;
+    letter-spacing: 4px;
+    color: #974f08;
+    text-transform: uppercase;
+}
+
+/* Subtitle */
+header h3 {
+    margin-top: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    color: #b59d7c;
+}
+
+/* Marquee */
+header marquee {
+    margin-top: 25px;
+    font-weight: bold;
+    color: #12b50f;
+}
+
+h1 {
+    color: #e0a96d;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #d18b47;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #c47a3a;
+}
+
+/* Section spacing */
+hr {
+    width: 70%;
+    border: 1px solid #8c5a3c;
+    margin: 30px auto;
+}
+
+/* Navigation images */
+table {
+    margin: auto;
+}
+
+table img {
+    border-radius: 12px;
+    border: 2px solid #8c5a3c;
+    padding: 5px;
+    background: #220e02;
+    transition: 0.2s ease-in-out;
+}
+
+table img:hover {
+    background: #905f41;
+}
+
+/* Event table styling */
+table[border] {
+    background: #4a2d1f;
+    border-collapse: collapse;
+    width: 75%;
+}
+
+th {
+    background: #6b4128;
+    color: #fff3e6;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+}
+
+/* Event names highlight */
+td b {
+    color: #fdff76;
+    font-weight: bold;
+}
+
+tr:hover {
+    background: #5a3825;
+}
+
+/* Forms */
+
+form {
+    background: #4a2d1f;         /* mocha brown */
+    width: 380px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #8c5a3c;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.484);
+}
+
+/* Form labels */
+form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #efe4d8;
+}
+
+
+form input,
+form select,
+form textarea {
+    width: 80%;
+}
+
+input, select, textarea {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #8c5a3c;
+    background: #e8e2dcac;
+    color: #666363;
+    margin: 5px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background: #55a63f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background: #0b2d08;
+}
+
+/* Links */
+a {
+    color: #ffd2a6;
+    text-decoration: none;
+}
+
+
+
+/* Iframes */
+iframe {
+    border: 3px solid #8c5a3c;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    table[border] {
+        width: 95%;
+    }
+
+    table img {
+        width: 85px;
+        height: 85px;
+    }
+
+    iframe {
+        width: 95%;
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}

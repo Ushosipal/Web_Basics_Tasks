@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Attribute Styling</title>
+  <style>
+    [data-availability="available"] {
+      background-color: rgb(8, 123, 8);
+      font-weight: bold;
+      color: white;
+    }
+
+    [data-availability="issued"] {
+      background-color: rgb(190, 2, 2);
+      color: white;
+    }
+
+    [data-category="science"] {
+      border: 1px solid rgb(23, 19, 19);
+    }
+  </style>
+</head>
+
+
+<body>
+  <h2 align="center">
+    <ins>Library Book Records</ins>
+  </h2>
+
+  <table border="1" cellpadding="10" cellspacing="2" width="80%" align="center">
+    <tr bgcolor="lightgrey">
+      <th>Book Name</th>
+      <th>Category</th>
+      <th>Availability</th>
+    </tr>
+
+    <tr align="center">
+      <td data-category="science">Physics Fundamentals</td>
+      <td>Science</td>
+      <td data-availability="available">Available</td>
+    </tr>
+
+    <tr align="center">
+      <td>World History</td>
+      <td>History</td>
+      <td data-availability="issued">Issued</td>
+    </tr>
+
+    <tr align="center">
+      <td data-category="science">Chemistry Basics</td>
+      <td>Science</td>
+      <td data-availability="available">Available</td>
+    </tr>
+
+  </table>
+</body>
+</html>
