@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    background: linear-gradient(135deg, #150013, #928dab);
     min-height: 100vh;
     color: white;
 }
@@ -81,7 +81,7 @@ form input, form select {
 }
 
 .primary-btn {
-    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    background: linear-gradient(45deg, #96d786, #0072ff);
     color: white;
     border: none;
     cursor: pointer;
@@ -123,7 +123,7 @@ li {
 }
 
 li:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(145, 133, 133, 0.2);
 }
 
 li.income {
@@ -145,8 +145,14 @@ button {
 .edit {
     background: #ffd369;
 }
+.edit:hover{
+    background-color: rgb(222, 250, 61);
+}
 
 .delete {
     background: #ff4e50;
     color: white;
+}
+.delete:hover{
+    background-color: rgb(81, 6, 6);
 }
