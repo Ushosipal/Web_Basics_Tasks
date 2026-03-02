@@ -2,10 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hostel-Management-System</title>
+    <title>Hostel Management System</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <script src="./dist/app.js" type="module"></script>
+
+<h1>Hostel Management System</h1>
+
+<div class="dashboard">
+    <div class="card">Total Rooms <span id="totalRooms"></span></div>
+    <div class="card">Occupied <span id="occupiedRooms"></span></div>
+    <div class="card">Vacant <span id="vacantRooms"></span></div>
+    <div class="card">Residents <span id="totalResidents"></span></div>
+</div>
+
+<div class="container">
+
+    <form id="residentForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="number" id="age" placeholder="Age" required min="1">
+        <input type="text" id="phone" placeholder="Phone" required>
+        <input type="date" id="date" required>
+
+        <select id="room" required></select>
+
+        <button type="submit">Allot Room</button>
+    </form>
+
+    <input type="text" id="search" placeholder="Search by name or phone">
+
+    <h3>Residents</h3>
+    <ul id="residentList"></ul>
+
+</div>
+
+<script type="module" src="./dist/app.js"></script>
 </body>
 </html>

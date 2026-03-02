@@ -32,6 +32,9 @@
     // "noFallthroughCasesInSwitch": true,
     // "noPropertyAccessFromIndexSignature": true,
     "noEmitOnError":true,
+    // "allowImportingTsExtensions": true,
+    // "noEmit": true,
+    
 
     // Recommended Options
     "strict": true,
