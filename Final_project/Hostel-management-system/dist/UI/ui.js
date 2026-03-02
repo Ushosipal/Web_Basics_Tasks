@@ -33,6 +33,11 @@ export class UI {
             const phone = document.getElementById("phone").value;
             const date = document.getElementById("date").value;
             const room = Number(document.getElementById("room").value);
+            const phoneRegex = /^[6-9][0-9]{9}$/;
+            if (!phoneRegex.test(phone)) {
+                alert("Phone number must be 10 digits and start with 6, 7, 8, or 9.");
+                return;
+            }
             try {
                 if (this.editingId) {
                     this.hostelService.updateResident(this.editingId, {

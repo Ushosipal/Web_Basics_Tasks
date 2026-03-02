@@ -19,9 +19,10 @@
 <div class="container">
 
     <form id="residentForm">
-        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="name" placeholder="Name" required pattern="^[A-Za-z ]+$"
+>
         <input type="number" id="age" placeholder="Age" required min="1">
-        <input type="text" id="phone" placeholder="Phone" required>
+        <input type="tel" id="phone" placeholder="Phone" required maxlength="10" pattern="^[6-9][0-9]{9}$">
         <input type="date" id="date" required>
 
         <select id="room" required></select>

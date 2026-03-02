@@ -58,12 +58,27 @@ export class HostelService {
         localStorage.setItem('residents', JSON.stringify(this.residents));
     }
 
+ //!validate name and age
+    private validateNameAndAge(name: string, age: number) {
+
+    const nameRegex = /^[A-Za-z ]{3,}$/;
+    if (!nameRegex.test(name.trim())) {
+        throw new Error("Name must contain only letters and be at least 3 characters long.");
+    }
+
+    
+    if (isNaN(age) || age < 18) {
+        throw new Error("Age must be 18 or above.");
+    }
+}
+
 
     //! Add User
 
 
     addResident(name: string, age: number, phone: string, checkInDate: string, roomNumber: number) {
 
+        this.validateNameAndAge(name, age);
         // Room Check
         const room = this.rooms.find(room => room.roomNumber === roomNumber);
         if (!room) {
@@ -139,6 +154,12 @@ export class HostelService {
         }
 
         const resident = this.residents[residentIndex];
+
+            const finalName = updatedData.name ?? resident.name;
+            const finalAge = updatedData.age ?? resident.age;
+
+            this.validateNameAndAge(finalName, finalAge);
+
 
         if (updatedData.roomNumber && updatedData.roomNumber !== resident.roomNumber) {
             const oldRoom = this.rooms.find(room => room.roomNumber === resident.roomNumber);

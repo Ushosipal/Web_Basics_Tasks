@@ -36,8 +36,19 @@ export class HostelService {
         localStorage.setItem('rooms', JSON.stringify(this.rooms));
         localStorage.setItem('residents', JSON.stringify(this.residents));
     }
+    //!validate name and age
+    validateNameAndAge(name, age) {
+        const nameRegex = /^[A-Za-z ]{3,}$/;
+        if (!nameRegex.test(name.trim())) {
+            throw new Error("Name must contain only letters and be at least 3 characters long.");
+        }
+        if (isNaN(age) || age < 18) {
+            throw new Error("Age must be 18 or above.");
+        }
+    }
     //! Add User
     addResident(name, age, phone, checkInDate, roomNumber) {
+        this.validateNameAndAge(name, age);
         // Room Check
         const room = this.rooms.find(room => room.roomNumber === roomNumber);
         if (!room) {
@@ -89,11 +100,15 @@ export class HostelService {
         return { total, occupied, result };
     }
     updateResident(id, updatedData) {
+        var _a, _b;
         const residentIndex = this.residents.findIndex(r => r.id === id);
         if (residentIndex === -1) {
             throw new Error('Resident not found');
         }
         const resident = this.residents[residentIndex];
+        const finalName = (_a = updatedData.name) !== null && _a !== void 0 ? _a : resident.name;
+        const finalAge = (_b = updatedData.age) !== null && _b !== void 0 ? _b : resident.age;
+        this.validateNameAndAge(finalName, finalAge);
         if (updatedData.roomNumber && updatedData.roomNumber !== resident.roomNumber) {
             const oldRoom = this.rooms.find(room => room.roomNumber === resident.roomNumber);
             const newRoom = this.rooms.find(room => room.roomNumber === updatedData.roomNumber);
