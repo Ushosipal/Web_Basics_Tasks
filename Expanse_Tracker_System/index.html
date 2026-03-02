@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker </title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="main-container">
+
+    <h1 class="title">Expense Tracker</h1>
+
+    <!-- Dashboard Section -->
+    <div class="dashboard">
+        <div class="card balance-card">
+            <h3>Total Balance</h3>
+            <p>₹<span id="balance"></span></p>
+        </div>
+
+        <div class="card income-card">
+            <h3>Total Income</h3>
+            <p>₹<span id="income"></span></p>
+        </div>
+
+        <div class="card expense-card">
+            <h3>Total Expense</h3>
+            <p>₹<span id="expense"></span></p>
+        </div>
+
+        <div class="card monthly-card">
+            <h3>Monthly Balance</h3>
+            <p>₹<span id="monthly"></span></p>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-section">
+        <h2>Add Transaction</h2>
+        <form id="transactionForm">
+            <input type="text" id="title" placeholder="Transaction Title" required>
+            <input type="number" id="amount" placeholder="Amount" required min="1">
+
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <select id="category"></select>
+            <input type="date" id="date" required>
+
+            <button type="submit" class="primary-btn">Add Transaction</button>
+        </form>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <h3>Filter by Category</h3>
+        <select id="filterCategory">
+            <option value="All">All Categories</option>
+        </select>
+    </div>
+
+    <!-- Transaction List -->
+    <div class="list-section">
+        <h2>Transaction History</h2>
+        <ul id="transactionList"></ul>
+    </div>
+
+</div>
+
+<script type="module" src="./dist/app.js"></script>
+
+</body>
+</html>
